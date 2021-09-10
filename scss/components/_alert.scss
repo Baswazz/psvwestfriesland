@@ -1,0 +1,17 @@
+@mixin alert ($color, $textColor: inherit) {
+    padding: 0.25rem;
+    background-color: $color;
+    color: $textColor;
+    border-radius: .25rem;
+    margin-bottom: 1rem;
+
+    .alert-inner {
+      border: 1px dashed darken($color, 15%);
+      border-radius: .25rem;
+      padding: 0.5rem;
+    }
+}
+
+.alert {
+    @include alert($alert, $bg);
+}

@@ -1,0 +1,62 @@
+// Layout
+.flex {
+  display: flex;
+}
+
+$items: (
+  "flex-start",
+  "flex-end",
+  'center',
+);
+
+$justify: (
+  'start',
+  'end',
+  'center',
+  'space-around',
+  'space-evenly',
+  'stretch',
+);
+
+@each $item in $items {
+  .items-#{$item} {
+    align-items: #{$item}
+  }
+}
+
+@each $item in $justify {
+  .justify-#{$item} {
+    align-items: #{$item}
+  }
+}
+
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
+.w-full {
+  width: 100%;
+}
+
+.h-full {
+  height: 100%;
+}
+
+.container {
+  @media (min-width: $breakpoint-desktop) {
+    max-width: 1420px;
+    margin: 0 auto;
+  }
+}
+
+main section img {
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+  display: block;
+}
+
+.section {
+  @media (min-width: $breakpoint-desktop) {
+    padding-bottom: 4rem;
+  }
+}

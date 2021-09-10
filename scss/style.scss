@@ -1,0 +1,61 @@
+@import 'variables';
+@import 'normalize';
+@import 'typography';
+@import 'helpers';
+@import 'spacing';
+@import 'layout';
+@import 'components/button';
+@import 'components/alert';
+@import 'components/nav';
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  background-color: $bg;
+}
+
+::-moz-selection{ background: $secondary; color: #fff; }
+::selection { background: $secondary; color: #fff; }
+
+a {
+    color: $primary;
+    transition: color .1s ease-in;
+
+    &:hover {
+        color: $secondary;
+    }
+    &:active {
+        color: darken($secondary, 20%);
+    }
+}
+
+img {
+  max-width: 100%;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+
+  th,
+  td {
+    // border: 1px dashed $border;
+    padding: 0.75rem;
+  }
+
+  th {
+    font-weight: 700;
+    text-align: left;
+  }
+}
+
+ol, ul {
+  list-style: none;
+}
+
+fieldset, ol, ul {
+  margin: 0;
+  padding: 0;
+}

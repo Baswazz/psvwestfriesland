@@ -1,0 +1,18 @@
+$breakpoint-desktop: 960px;
+
+// Palette
+$hunterGreen: #386641;
+$mayGreen: #6A994E;
+$eggShell: #F2E8CF;
+$cafeAuLait: #A98467;
+$umber: #6C584C;
+$jonquil: #ECC30B;
+$eggShell95: #faf5eb;
+
+$white: $eggShell95;
+$bg: $eggShell95;
+$primary: darken($umber, 8%);
+$secondary: $jonquil;
+$alert: $mayGreen;
+$text: $primary;
+$border: darken($eggShell, 15%);
