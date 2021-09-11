@@ -1,0 +1,22 @@
+{
+  "name": "rvwestfriesland",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Baswazz/rvwestfriesland.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Baswazz/rvwestfriesland/issues"
+  },
+  "homepage": "https://github.com/Baswazz/rvwestfriesland#readme",
+  "dependencies": {
+    "@splidejs/splide": "^2.4.21"
+  }
+}

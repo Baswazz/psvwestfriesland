@@ -25,7 +25,7 @@ const observer = new IntersectionObserver(function(entries, observer) {
   entries.forEach(function(entry) {
     const id = entry.target.getAttribute('id');
     const hrefs = document.querySelectorAll(`a[href="#${id}"]`);
-    if (entry.isIntersecting && entry.intersectionRatio >= 0.55) {
+    if (entry.isIntersecting && entry.intersectionRatio >= 0.5) {
       hrefs.forEach(function(href){
         href.classList.add('active');
       })
@@ -46,6 +46,9 @@ document.querySelector('#nav-burger').addEventListener('click', function() {
   this.classList.toggle('active');
   document.querySelector('#mobile-nav').classList.toggle('active');
 });
+
+// Splidejs
+new Splide('.splide').mount();
 
 // const images = document.querySelectorAll('img');
 // new simpleParallax(images);
