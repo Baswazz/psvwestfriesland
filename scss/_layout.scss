@@ -42,6 +42,12 @@ $justify: (
   height: 100%;
 }
 
+.v-center {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
 .container {
   @media (min-width: $breakpoint-desktop) {
     max-width: 1420px;
@@ -57,7 +63,7 @@ $justify: (
   }
 }
 
-main section img {
+main section .section-img {
   margin-top: 3rem;
   margin-bottom: 3rem;
   display: block;
@@ -67,4 +73,10 @@ main section img {
   @media (min-width: $breakpoint-desktop) {
     padding-bottom: 4rem;
   }
+}
+
+.card {
+  background-color: #fff;
+  padding: 1rem;
+  border-radius: 0.5rem;
 }

@@ -1,12 +1,13 @@
-@import 'variables';
-@import 'normalize';
-@import 'typography';
-@import 'helpers';
-@import 'spacing';
-@import 'layout';
-@import 'components/button';
-@import 'components/alert';
-@import 'components/nav';
+@import "variables";
+@import "normalize";
+@import "typography";
+@import "helpers";
+@import "spacing";
+@import "layout";
+@import "components/button";
+@import "components/alert";
+@import "components/nav";
+@import "vendor/splidejs";
 
 * {
   box-sizing: border-box;
@@ -16,19 +17,25 @@ html {
   background-color: $bg;
 }
 
-::-moz-selection{ background: $secondary; color: #fff; }
-::selection { background: $secondary; color: #fff; }
+::-moz-selection {
+  background: $secondary;
+  color: #fff;
+}
+::selection {
+  background: $secondary;
+  color: #fff;
+}
 
 a {
-    color: $primary;
-    transition: color .1s ease-in;
+  color: $primary;
+  transition: color 0.1s ease-in;
 
-    &:hover {
-        color: $secondary;
-    }
-    &:active {
-        color: darken($secondary, 20%);
-    }
+  &:hover {
+    color: $secondary;
+  }
+  &:active {
+    color: darken($secondary, 20%);
+  }
 }
 
 img {
@@ -51,11 +58,14 @@ table {
   }
 }
 
-ol, ul {
+ol,
+ul {
   list-style: none;
 }
 
-fieldset, ol, ul {
+fieldset,
+ol,
+ul {
   margin: 0;
   padding: 0;
 }

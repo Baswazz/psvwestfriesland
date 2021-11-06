@@ -48,7 +48,4 @@ document.querySelector('#nav-burger').addEventListener('click', function() {
 });
 
 // Splidejs
-new Splide('.splide').mount();
-
-// const images = document.querySelectorAll('img');
-// new simpleParallax(images);
+new Splide('.splide ').mount();

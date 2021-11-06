@@ -4,7 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "sass:watch": "sass --watch --update scss:css",
+    "sass:build": "sass --no-source-map --update --style=compressed scss:css"
   },
   "repository": {
     "type": "git",
@@ -16,7 +18,8 @@
     "url": "https://github.com/Baswazz/rvwestfriesland/issues"
   },
   "homepage": "https://github.com/Baswazz/rvwestfriesland#readme",
-  "dependencies": {
-    "@splidejs/splide": "^2.4.21"
+  "devDependencies": {
+    "@splidejs/splide": "^3.2.5",
+    "sass": "^1.43.4"
   }
 }
