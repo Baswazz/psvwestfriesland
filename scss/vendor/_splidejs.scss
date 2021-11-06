@@ -10,6 +10,15 @@
   padding: 0;
   transition: transform .2s linear;
 
+  &:hover {
+    cursor: pointer;
+    opacity: 0.9;
+  }
+
+  &:focus {
+    outline: 0;
+  }
+
   &.is-active {
     background: $primary;
     transform: scale(1);
@@ -17,5 +26,12 @@
 }
 
 .splide__pagination {
-margin-top: 1rem;
+  margin-top: 1rem;
+
+  li {
+    display: inline-block;
+    list-style-type: none;
+    margin: 0;
+    pointer-events: auto;
+  }
 }

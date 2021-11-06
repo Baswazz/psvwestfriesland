@@ -878,6 +878,13 @@ main section .section-img {
   padding: 0;
   transition: transform 0.2s linear;
 }
+.splide__pagination__page:hover {
+  cursor: pointer;
+  opacity: 0.9;
+}
+.splide__pagination__page:focus {
+  outline: 0;
+}
 .splide__pagination__page.is-active {
   background: #54443b;
   transform: scale(1);
@@ -885,6 +892,12 @@ main section .section-img {
 
 .splide__pagination {
   margin-top: 1rem;
+}
+.splide__pagination li {
+  display: inline-block;
+  list-style-type: none;
+  margin: 0;
+  pointer-events: auto;
 }
 
 * {
