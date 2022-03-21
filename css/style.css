@@ -383,12 +383,8 @@ h5 {
   font-size: 1.333rem;
 }
 
-small, .text_small {
+small, .text-sm {
   font-size: 0.75rem;
-}
-
-.text-sm {
-  font-size: 0.875rem;
 }
 
 .m-0 {
@@ -1364,6 +1360,10 @@ table td {
 table th {
   font-weight: 700;
   text-align: left;
+}
+
+.table-bordered th, .table-bordered td {
+  border: 1px dashed #e2cb93;
 }
 
 ol,

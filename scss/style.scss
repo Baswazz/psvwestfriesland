@@ -57,6 +57,11 @@ table {
     text-align: left;
   }
 }
+.table-bordered {
+  th, td {
+    border: 1px dashed $border;
+  }
+}
 
 ol,
 ul {
