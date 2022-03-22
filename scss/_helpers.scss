@@ -1,3 +1,14 @@
 // Helpers
 
 // Text
+$text-align: (
+  "left",
+  "right",
+  'center',
+);
+
+@each $item in $text-align {
+  .text-#{$item} {
+    text-align: #{$item}
+  }
+}
