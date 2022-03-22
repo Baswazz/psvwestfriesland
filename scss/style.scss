@@ -46,6 +46,10 @@ table {
   width: 100%;
   border-collapse: collapse;
 
+  tr.spacer {
+    height: 1rem;
+  }
+
   th,
   td {
     // border: 1px dashed $border;
@@ -57,9 +61,21 @@ table {
     text-align: left;
   }
 }
-.table-bordered {
-  th, td {
+table.bordered {
+  th, 
+  td {
     border: 1px dashed $border;
+  }
+}
+table.small {
+  thead th {
+    padding: 0.5rem;
+  }
+  tbody {
+    th,
+    td {
+      padding: 0 0.5rem;
+    }
   }
 }
 
