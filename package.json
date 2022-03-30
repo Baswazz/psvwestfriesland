@@ -2,11 +2,10 @@
   "name": "rvwestfriesland",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "source": "src/index.html",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "sass:watch": "sass --watch --update--style=expanded scss:css",
-    "sass:build": "sass --no-source-map --style=compressed scss:cssgit ssdsdssdsdsdsdsd"
+    "start": "parcel",
+    "build": "parcel build"
   },
   "repository": {
     "type": "git",
@@ -19,7 +18,7 @@
   },
   "homepage": "https://github.com/Baswazz/rvwestfriesland#readme",
   "devDependencies": {
-    "@splidejs/splide": "^3.2.5",
-    "sass": "^1.43.4"
+    "@splidejs/splide": "^3.6.12",
+    "parcel": "^2.4.0"
   }
 }
