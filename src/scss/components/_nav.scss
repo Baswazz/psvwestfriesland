@@ -1,13 +1,18 @@
 // Mobile navigation
 %nav {
-  font-family: 'Roboto Slab', serif;
+  font-family: "Roboto Slab", serif;
   font-weight: 500;
   font-size: 1.25rem;
 
   a {
+    color: $primary;
     text-decoration: none;
     border-bottom: 1px solid transparent;
-    transition: border-bottom .1s ease-in;
+    transition: border-bottom 0.1s ease-in;
+
+    &:hover {
+      color: $primary;
+    }
   }
 
   a.active {
@@ -80,7 +85,7 @@
         opacity: 0;
       }
       &:nth-child(3) {
-        transform: translateY(-5px) rotate(-45deg)
+        transform: translateY(-5px) rotate(-45deg);
       }
     }
   }
@@ -100,9 +105,29 @@
     display: block;
   }
 
-  a:hover {
-    color: $primary;
+  @extend %nav;
+}
+
+@media (prefers-color-scheme: dark) {
+  #mobile-nav {
+    background-color: $bg-darkmode;
   }
 
-  @extend %nav;
+  #mobile-nav,
+  #main-nav {
+    border-color: $border-darkmode;
+
+    a {
+      color: $text-darkmode;
+
+      &:hover {
+        color: $secondary-darkmode;
+      }
+    }
+
+    a.active {
+      color: $text-darkmode;
+      border-color: $text-darkmode;
+    }
+  }
 }

@@ -1,20 +1,26 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@500&family=Roboto:wght@300;400;700&display=swap');
-
-html {font-size: 100%;} /*16px*/
+html {
+  font-size: 100%;
+} /*16px*/
 
 body {
   background: $bg;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   font-weight: 300;
   line-height: 1.75;
   color: $primary;
 }
 
-p {margin-bottom: 1rem;}
+p {
+  margin-bottom: 1rem;
+}
 
-h1, h2, h3, h4, h5 {
+h1,
+h2,
+h3,
+h4,
+h5 {
   margin: 3rem 0 1.38rem;
-  font-family: 'Roboto Slab', serif;
+  font-family: "Roboto Slab", serif;
   font-weight: 500;
   line-height: 1.2;
 }
@@ -24,12 +30,23 @@ h1 {
   font-size: 4.209rem;
 }
 
-h2 {font-size: 3.157rem;}
+h2 {
+  font-size: 3.157rem;
+}
 
-h3 {font-size: 2.369rem;}
+h3 {
+  font-size: 2.369rem;
+}
 
-h4 {font-size: 1.777rem;}
+h4 {
+  font-size: 1.777rem;
+}
 
-h5 {font-size: 1.333rem;}
+h5 {
+  font-size: 1.333rem;
+}
 
-small, .text-sm {font-size: 0.75rem;}
+small,
+.text-sm {
+  font-size: 0.75rem;
+}

@@ -34,9 +34,6 @@ a {
   &:hover {
     color: $secondary;
   }
-  &:active {
-    color: darken($secondary, 20%);
-  }
 }
 
 img {
@@ -90,4 +87,27 @@ ol,
 ul {
   margin: 0;
   padding: 0;
+}
+
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: $bg-darkmode;
+    color: $text-darkmode;
+  }
+
+  a {
+    color: $text-darkmode;
+
+    &:hover,
+    &.active {
+      color: $secondary-darkmode;
+    }
+  }
+
+  table.bordered {
+    th,
+    td {
+      border-color: $border-darkmode;
+    }
+  }
 }
