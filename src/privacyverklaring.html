@@ -9,7 +9,7 @@
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@500&family=Roboto:wght@300;400;700&display=swap"
     />
-    <link rel="stylesheet" href="scss/styles.scss" />
+    <link rel="stylesheet" href="sass/styles.scss" />
     <link rel="icon" href="favicon.ico" sizes="any" />
     <link rel="icon" href="favicon.svg" type="image/svg+xml" />
     <link rel="apple-touch-icon" href="images/apple-touch-icon.png" />
@@ -17,9 +17,9 @@
   </head>
 
   <body>
-    <div class="container flex">
-      <div class="p-3" id="main-nav">
-        <header class="mb-3">
+    <div class="container-sm">
+      <main class="px-3">
+        <header class="text-center py-3">
           <a href="/" class="no-hover">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -48,13 +48,6 @@
             </svg>
           </a>
         </header>
-        <nav>
-          <ul>
-            <li class="mb-1"><a href="index.html">Home</a></li>
-          </ul>
-        </nav>
-      </div>
-      <main class="px-3">
         <section class="section">
           <h2>Privacyverklaring</h2>
           <p>
@@ -70,7 +63,12 @@
             Daarom hebben wij in dit statement voor u uiteengezet hoe wij met uw
             persoonsgegevens omgaan en welke rechten u heeft. Heeft u vragen
             naar aanleiding van het lezen van dit statement, stel uw vraag dan
-            gerust per e-mail aan: psvwestfrieslandalgemeen@gmail.com
+            gerust per
+            <a
+              href="mailto:psvwestfrieslandalgemeen@gmail@@com"
+              onmouseover="this.href=this.href.replace('@@','.')"
+              >e-mail</a
+            >
           </p>
           <p>
             In onderstaande tabel kunt u snel en eenvoudig terugvinden met welk

@@ -3,30 +3,19 @@
   display: flex;
 }
 
-$items: (
-  "flex-start",
-  "flex-end",
-  'center',
-);
+$items: ("flex-start", "flex-end", "center");
 
-$justify: (
-  'start',
-  'end',
-  'center',
-  'space-around',
-  'space-evenly',
-  'stretch',
-);
+$justify: ("start", "end", "center", "space-around", "space-evenly", "stretch");
 
 @each $item in $items {
   .items-#{$item} {
-    align-items: #{$item}
+    align-items: #{$item};
   }
 }
 
 @each $item in $justify {
   .justify-#{$item} {
-    align-items: #{$item}
+    align-items: #{$item};
   }
 }
 
@@ -51,15 +40,27 @@ $justify: (
 .container {
   @media (min-width: $breakpoint-desktop) {
     max-width: 1420px;
-    margin: 0 auto;
+    margin-inline: auto;
+  }
+}
+
+@media (min-width: $breakpoint-desktop) {
+  .container {
+    max-width: 1420px;
+    margin-inline: auto;
+  }
+
+  .container-sm {
+    max-width: 960px;
+    margin-inline: auto;
   }
 }
 
 #main {
-  width: 100%;
-  
+  width: 100vw;
+
   @media (min-width: $breakpoint-desktop) {
-    width: calc(100% - 20rem);
+    width: calc(100vw - 20rem);
   }
 }
 

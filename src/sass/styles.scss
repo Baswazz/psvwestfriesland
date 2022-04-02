@@ -10,12 +10,15 @@
 @import "../../node_modules/@splidejs/splide/dist/css/splide.min.css";
 @import "vendor/splidejs";
 
-* {
+*,
+*:before,
+*:after {
   box-sizing: border-box;
 }
 
 html {
   background-color: $bg;
+  scroll-behavior: smooth;
 }
 
 ::-moz-selection {
