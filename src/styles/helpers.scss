@@ -1,0 +1,33 @@
+// Helpers
+
+$opacity: (
+  0: "0",
+  10: ".1",
+  20: ".2",
+  30: ".3",
+  40: ".4",
+  50: ".5",
+  60: ".6",
+  70: ".7",
+  80: ".8",
+  90: ".9",
+  100: "1"
+);
+
+@each $item, $value in $opacity {
+  .opacity-#{$item} {
+    opacity: #{$value};
+  }
+}
+
+$color-text-align: ("left", "right", "center");
+
+@each $item in $color-text-align {
+  .text-#{$item} {
+    text-align: #{$item};
+  }
+}
+
+.no-hover {
+  color: inherit !important;
+}

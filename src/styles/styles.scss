@@ -1,0 +1,109 @@
+@use "variables" as v;
+// @use "normalize";
+@use "typography";
+@use "helpers";
+@use "spacing";
+@use "layout";
+// @use "button";
+@use "alert";
+// @use "@splidejs/splide/dist/css/splide.min.css";
+@use "@splidejs/splide/css/core";
+@use "splidejs";
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+html {
+  background-color: v.$color-bg;
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+}
+
+::-moz-selection {
+  background: v.$color-secondary;
+  color: #fff;
+}
+::selection {
+  background: v.$color-secondary;
+  color: #fff;
+}
+
+a {
+  color: v.$color-primary;
+  transition: color 0.1s ease-in;
+
+  &:hover {
+    color: v.$color-secondary;
+  }
+}
+
+img {
+  max-width: 100%;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 1rem;
+
+  tr.spacer {
+    height: 1rem;
+  }
+
+  th,
+  td {
+    // border: 1px dashed $color-border;
+    padding: 0.75rem;
+  }
+
+  th {
+    font-weight: 700;
+    text-align: left;
+  }
+}
+table.bordered {
+  th,
+  td {
+    border: 1px dashed v.$color-border;
+  }
+}
+table.small {
+  thead th {
+    padding: 0.5rem;
+  }
+  tbody {
+    th,
+    td {
+      padding: 0 0.5rem;
+    }
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: v.$color-bg-dark;
+    color: v.$color-text-dark;
+  }
+
+  a {
+    color: v.$color-text-dark;
+
+    &:hover,
+    &.active {
+      color: v.$color-secondary-dark;
+    }
+  }
+
+  table.bordered {
+    th,
+    td {
+      border-color: v.$color-border-dark;
+    }
+  }
+}

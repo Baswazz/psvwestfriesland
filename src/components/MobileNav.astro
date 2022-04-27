@@ -1,0 +1,158 @@
+---
+import Header from "../components/Header.astro";
+import Contact from "../components/Contact.astro";
+
+const { items } = Astro.props;
+---
+
+<a role="button" id="mobile-nav-toggle" aria-controls="mobile-nav" aria-expanded="false">
+  <span></span>
+  <span></span>
+  <span></span>
+</a>
+<nav id="mobile-nav" class="p-3" data-visible="false">
+  <Header />
+  <nav>
+    <ul>
+      {items.map((item) => <li class="mb-1"><a href={item.url}>{item.label}</a></li>)}
+    </ul>
+  </nav>
+  <Contact />
+</nav>
+
+
+
+<script>
+  const mobileNav = document.getElementById("mobile-nav");
+  const navToggle = document.getElementById("mobile-nav-toggle");
+
+  navToggle.addEventListener("click", function () {
+    const visibility = navToggle.getAttribute("aria-expanded");
+
+    if (visibility === "false") {
+      navToggle.setAttribute("aria-expanded", true);
+      mobileNav.setAttribute("data-visible", true);
+    } else if (visibility === "true") {
+      navToggle.setAttribute("aria-expanded", false);
+      mobileNav.setAttribute("data-visible", false);
+    }
+  });
+
+  document.querySelectorAll("#mobile-nav ul li a").forEach(function (e) {
+    e.addEventListener("click", function () {
+      navToggle.setAttribute("aria-expanded", false);
+      mobileNav.setAttribute("data-visible", false);
+    });
+  });
+</script>
+
+<style lang="scss">
+  @use "../styles/variables.scss" as v;
+
+  #mobile-nav-toggle {
+    background-color: v.$color-primary;
+    width: 3.25rem;
+    height: 3.25rem;
+    // aspect-ratio: 1;
+    display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 9999;
+
+    span {
+      background-color: v.$color-secondary;
+      display: block;
+      height: 2px;
+      left: calc(50% - 11px);
+      position: absolute;
+      transform-origin: center;
+      transition-duration: 86ms;
+      transition-property: background-color, opacity, transform;
+      transition-timing-function: ease-out;
+      width: 20px;
+
+      &:nth-child(1) {
+        top: calc(50% - 6px);
+      }
+      &:nth-child(2) {
+        top: calc(50% - 1px);
+      }
+      &:nth-child(3) {
+        top: calc(50% + 4px);
+      }
+    }
+
+    @media (max-width: v.$breakpoint-desktop) {
+      display: block;
+    }
+  }
+
+  #mobile-nav-toggle[aria-expanded="true"] {
+    span {
+      &:nth-child(1) {
+        transform: translateY(5px) rotate(45deg);
+      }
+      &:nth-child(2) {
+        opacity: 0;
+      }
+      &:nth-child(3) {
+        transform: translateY(-5px) rotate(-45deg);
+      }
+    }
+  }
+
+  #mobile-nav {
+    background-color: v.$color-primary;
+    color: v.$color-secondary;
+    position: fixed;
+    // inset: 0;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    min-height: 100%;
+    overflow: hidden;
+    display: grid;
+    align-content: space-between;
+    text-align: center;
+    padding: 1rem;
+    z-index: 999;
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 400ms ease-out, opacity 400ms ease-out;
+    font-family: v.$text-font-secondary;
+    font-weight: 400;
+    font-size: 1rem;
+
+    ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+
+      a {
+        text-decoration: none;
+        border-bottom: 1px solid transparent;
+        transition: border-bottom 0.1s ease-in;
+      }
+
+      a:hover {
+        color: inherit;
+      }
+
+      // a.active {
+      //   color: $color-primary;
+      //   border-color: $color-primary;
+      // }
+    }
+
+    a,
+    a:hover {
+      color: v.$color-secondary;
+    }
+  }
+
+  #mobile-nav[data-visible="true"] {
+    visibility: visible;
+    opacity: 1;
+  }
+</style>

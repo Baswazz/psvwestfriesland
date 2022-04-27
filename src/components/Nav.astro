@@ -1,0 +1,68 @@
+---
+  
+---
+
+<!-- <nav>
+  <ul>
+    <li class="mb-1"><a href="#home">Home</a></li>
+    <li class="mb-1"><a href="#accommodatie">Accommodatie</a></li>
+    <li class="mb-1"><a href="#bestuur">Bestuur</a></li>
+    <li class="mb-1"><a href="#lessen">Lessen</a></li>
+    <li class="mb-1"><a href="#wedstrijden">Wedstrijden</a></li>
+    <li class="mb-1"><a href="#lidmaatschap">Lidmaatschap</a></li>
+    <li class="mb-1"><a href="#geschiedenis">Geschiedenis</a></li>
+  </ul>
+</nav> -->
+
+<style lang="scss">
+  @use "../styles/variables.scss" as v;
+
+  nav {
+    font-family: "Noto Serif", serif;
+    font-weight: 500;
+    font-size: 1rem;
+
+    ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    a {
+      text-decoration: none;
+      border-bottom: 1px solid transparent;
+      transition: border-bottom 0.1s ease-in;
+
+      &:hover {
+        color: inherit;
+      }
+    }
+
+    // a.active {
+    //   color: $color-primary;
+    //   border-color: $color-primary;
+    // }
+
+    @media (min-width: v.$breakpoint-desktop) {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
+  @media (prefers-color-scheme: dark) {
+    nav {
+      a {
+        color: v.$color-text-dark;
+
+        &:hover {
+          color: v.$color-secondary-dark;
+        }
+      }
+
+      a.active {
+        color: v.$color-text-dark;
+        border-color: v.$color-text-dark;
+      }
+    }
+  }
+</style>

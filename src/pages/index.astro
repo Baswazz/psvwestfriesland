@@ -1,0 +1,509 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import MobileNav from "../components/MobileNav.astro";
+import Sidebar from "../components/Sidebar.astro";
+import Footer from "../components/Footer.astro";
+
+const title = "PSV Westfriesland";
+const year = new Date().getFullYear() - 1927;
+
+const navItems = [
+  { label: "Home", url: "#home" },
+  { label: "Accommodatie", url: "#accommodatie" },
+  { label: "Bestuur", url: "#bestuur" },
+  { label: "Lessen", url: "#lessen" },
+  { label: "Wedstrijden", url: "#wedstrijden" },
+  { label: "Lidmaatschap", url: "#lidmaatschap" },
+  { label: "Geschiedenis", url: "#geschiedenis" }
+];
+---
+
+<BaseLayout {title}>
+  <MobileNav items={navItems} />
+  <div class="container flex">
+    <Sidebar items={navItems}  />
+    <main class="px-2 px-md-3" id="main">
+      <section class="section" id="home">
+          <h1>
+            Wat ooit klein begon in
+            Schagerbrug bestaat inmiddels al <span class="highlight">{year} jaar</span> met meegroeiende kwaliteit!
+          </h1>
+          <p>
+            Onze kracht ligt in de ruime lidmaatschap en mogelijkheden, en de
+            mogelijkheid om elke week mee te trainen in de groepslessen op
+            vrijdagavond of zaterdag ochtend. Lessen in kleine gecategoriseerde
+            groepen van bixie tot Z en 1 keer per maand keuze om deel te nemen
+            aan de springles of behendigheid.<br />
+            We zijn een vereniging die houd van de uitspraak “Vele handen maken
+            ligt werk”. Dit is ook een van de makers wat de gezellige sfeer
+            creëert. Door de gemoedelijkheid en openheid voel je je al snel
+            thuis.
+          </p>
+        </section>
+
+        <section class="section" id="accommodatie">
+          <h2>Accommodatie</h2>
+          <ol>
+            <li>
+              Buitenrijbaan van 20x 40 meter met een automatische beregenings-
+              installatie
+            </li>
+            <li>
+              Grasbaan van 80x80 meter waar je naar hartenlust kunt trainen
+            </li>
+            <li>
+              Veel verschillende lidmaatschappen geeft ruimte voor ieder wat
+              wils.
+            </li>
+            <li>
+              Clinics door o.a. Dionne Saman en Jacob van de Heide toegankelijk
+              voor iedereen.
+            </li>
+            <li>
+              De boet, een gezellige ruimte voor onder andere vergaderingen,
+              wedstrijdsecretariaat, wachtende ouders onder het genot van thee
+              of koffie. En de aanwezigheid van toiletten.
+            </li>
+          </ol>
+          <h4>Wat wordt er allemaal georganiseerd</h4>
+          <p>
+            Leden en niet leden kunnen 3 keer per jaar mee doen aan de
+            onderlinge wedstrijden. Die van buitenaf ook erg goed bekend staat
+            om de leuke prijsjes en de gezellige sfeer. Als je lid bent van de
+            rijvereniging doe je tijdens deelname meteen mee aan de
+            Clubkampioenschappen. Deze worden aan het begin van het nieuwe jaar
+            bekend gemaakt. Grote en kleine trofeeën worden dan uitgereikt
+            tijdens een gezellige nieuwjaarsreceptie met hapjes en drankjes en
+            sjoelwedstrijd voor jong en oud. Eens per jaar wordt er een
+            gezamenlijke bosrit gemaakt door Hargen met achteraf een lunch. En
+            de avond van de 3de onderlinge wedstrijd sluiten we het jaar af met
+            een leden BBQ.
+          </p>
+          <h4>Algemene ledenvergadering</h4>
+          <p>
+            Wij vinden het belangrijk dat leden inspraak kunnen hebben. In de
+            boet, de kantine, hebben we 2 maal per jaar de algemene
+            ledenvergadering. Hier worden de leden bijgepraat over o.a. het
+            bestuur, activiteiten, kosten en KNHS statussen. Maar ook kunnen de
+            leden hier bij de rondvraag ideeën en vragen aandragen. Het
+            jaarlijkse vrijwilligers schema invullen hoort hier bij. De club
+            hanteert de regel dat ieder lid minimaal 2 keer op komt tijdens een
+            vrijwilligerstaak. Hierbij kun je denken aan; schrijven bij een jury
+            of helpen in de kantine tijdens een wedstrijd en clubloten verkopen.
+          </p>
+        </section>
+
+        <section class="section" id="bestuur">
+          <h2>Bestuur</h2>
+          <table class="small">
+            <tbody>
+              <tr>
+                <th>Voorzitter</th>
+                <td>Quinsten de Moes</td>
+              </tr>
+              <tr>
+                <th>Vicevoorzitter</th>
+                <td>Natasja Jones</td>
+              </tr>
+              <tr>
+                <th>Secretaris</th>
+                <td>Ruby Glas</td>
+              </tr>
+              <tr>
+                <th>Ondersteunend</th>
+                <td>Dionne Saman</td>
+              </tr>
+              <tr>
+                <th>Lid van bestuur en lessenplanner</th>
+                <td>Lonni Nielsen</td>
+              </tr>
+              <tr>
+                <th>Penningmeester</th>
+                <td>Peter Jones</td>
+              </tr>
+              <tr>
+                <th>Organisatie onderlinge wedstrijden</th>
+                <td>Emma Jones</td>
+              </tr>
+              <tr>
+                <th>Instructie</th>
+                <td>Dionne Saman</td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+
+        <section class="section" id="lessen">
+          <h2>Lessen</h2>
+          <p>
+            Elke vrijdagavond en zaterdagochtend -zonder zomer of winterstops-
+            lessen op onze eigen locatie. In de zomer wordt er getraind op het
+            grasland dat zorgvuldig wordt onderhouden en anders in de 20x 40 bak
+            met verlichting.
+          </p>
+          <p>
+            Lessende leden maken gebruik van de lessen die gegeven worden door
+            onze vaste instructie. Dionne Saman neemt de tijd voor elke ruiter
+            en helpt ruiters van Bixie tot Z niveau. De eerste zaterdag van de
+            maand wordt er geïnventariseerd welke ruiter wilt springen of
+            behendigheid wilt rijden. De vereniging heeft een groot aantal
+            hindernissen, zodat er altijd weer een ander parcours gebouwd kan
+            worden om je zo verder te ontwikkelen op techniek, balans en gevoel.
+          </p>
+          <div class="alert">
+            <div class="alert-inner">
+              Mocht je interesse zijn gewekt, je mag 3 proeflessen gratis mee
+              rijden!
+            </div>
+          </div>
+          <h4>Afspraken</h4>
+          <p>
+            Afmelden voor de dressuur en springlessen voor donderdagavond in de
+            Les-App Bij bijzonderheden of veranderingen wordt er donderdagavond
+            in de Les-App een berichtje geplaatst Dragen van een Bodyprotector
+            met springles tot 18 jaar verplicht.
+          </p>
+          <h4>Les indelingen</h4>
+          <p>Tenzij anders wordt aangegeven in de Les-App:</p>
+          <table class="small">
+            <thead>
+              <tr>
+                <th>Vrijdag</th>
+                <th>Zaterdag</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>19:15 / 20:00</td>
+                <td>9:15 / 10:00</td>
+              </tr>
+              <tr>
+                <td></td>
+                <td>10:05 / 10:50</td>
+              </tr>
+              <tr>
+                <td></td>
+                <td>10:55 / 11:40</td>
+              </tr>
+            </tbody>
+          </table>
+          <img class="section-img" src="/assets/strand-wandeling.jpg" alt="Strand wandeling"/>
+        </section>
+
+        <section class="section" id="wedstrijden">
+          <h2>Wedstrijden</h2>
+          <h5>
+            Officiële KNHS wedstrijden op het terrein van PSV West-Friesland
+          </h5>
+          <p>
+            Je kunt je opgeven via
+            <a href="https://mijnknhs.nl" target="_blank">MijnKNHS.nl</a>
+          </p>
+          <table class="bordered">
+            <tbody>
+              <tr>
+                <td>Vrijdag 6 mei 2022</td>
+                <td>Dressuur avondwedstrijd PSV West-Friesland</td>
+              </tr>
+              <tr>
+                <td>Vrijdag 3 juni 2022</td>
+                <td>Dressuur avondwedstrijd PSV West-Friesland</td>
+              </tr>
+              <tr>
+                <td>Vrijdag 1 juli 2022</td>
+                <td>Dressuur avondwedstrijd PSV West-Friesland</td>
+              </tr>
+              <tr>
+                <td>Vrijdag 5 augustus 2022</td>
+                <td>Dressuur avondwedstrijd PSV West-Friesland</td>
+              </tr>
+              <tr>
+                <td>Zondag 21 augustus 2022</td>
+                <td>Dressuurwedstrijd PSV West-Friesland</td>
+              </tr>
+            </tbody>
+          </table>
+          <h5>Onderlinge wedstrijden op het terrein van PSV West-Friesland</h5>
+          <p>
+            Je kunt je opgeveven via
+            <a
+              href="mailto:emma.bt.jones@gmail@@com"
+              onmouseover="this.href=this.href.replace('@@','.')"
+              >Emma Jones.</a
+            >
+          </p>
+          <table class="bordered">
+            <tbody>
+              <tr>
+                <td>Zondag 1 mei 2022</td>
+                <td>1ste onderlinge wedstrijd PSV West-Friesland</td>
+              </tr>
+              <tr>
+                <td>Zondag 10 juli 2022</td>
+                <td>2e onderlinge wedstrijd PSV West-Friesland</td>
+              </tr>
+              <tr>
+                <td>Zondag 28 augustus 2022</td>
+                <td>3e onderlinge wedstrijd PSV West-Friesland</td>
+              </tr>
+            </tbody>
+          </table>
+          <p>
+            De onderlinge westrijden bestaan uit springen (alle hoogtes),
+            dressuur B tm Z en Bixie.
+          </p>
+          <h5>Sponsors</h5>
+          <div
+            class="splide"
+            data-splide='{
+              "type": "loop", 
+              "perPage": 5,
+              "perMove": 1, 
+              "gap": 10,
+              "autoplay": false, 
+              "interval": 4000, 
+              "arrows": false,
+              "breakpoints": { "560": { "perPage": 3 }, "960": { "perPage": 5 } } }'
+          >
+            <div class="splide__track">
+              <ul class="splide__list">
+                <li class="splide__slide card">
+                  <img
+                    class="v-center"
+                    src="/assets/sponsors/oudbouwconstructies.png"
+                    alt="Oud Bouwconstructies"
+                  />
+                </li>
+                <li class="splide__slide card">
+                  <img
+                    class="v-center"
+                    src="/assets/sponsors/ranzijn.png"
+                    alt="Ranzijn"
+                  />
+                </li>
+                <li class="splide__slide card">
+                  <img
+                    class="v-center"
+                    src="/assets/sponsors/kinepolis.png"
+                    alt="Kinepolis"
+                  />
+                </li>
+                <li class="splide__slide card">
+                  <img
+                    class="v-center"
+                    src="/assets/sponsors/spar.png"
+                    alt="Spar"
+                  />
+                </li>
+                <li class="splide__slide card">
+                  <img
+                    class="v-center"
+                    src="/assets/sponsors/tuincentrumschoutenbos.png"
+                    alt="Tuincentrum Schoutenbox"
+                  />
+                </li>
+                <li class="splide__slide card">
+                  <img
+                    class="v-center"
+                    src="/assets/sponsors/hoeveslagerijleeuwenhorn.jpg"
+                    alt="Hoeveslagerij Leeuwenhorn"
+                  />
+                </li>
+                <li class="splide__slide card">
+                  <img
+                    class="v-center"
+                    src="/assets/sponsors/welkoop.jpg"
+                    alt="Welkoop"
+                  />
+                </li>
+                <li class="splide__slide card">
+                  <img
+                    class="v-center"
+                    src="/assets/sponsors/paardenmassage-helen-jones.jpg"
+                    alt="Paardenmassage Helen Jones"
+                  />
+                </li>
+                <li class="splide__slide card">
+                  <img
+                    class="v-center"
+                    src="/assets/sponsors/glasservice-vanzaanen.png"
+                    alt="Glasservice Vanzaanen"
+                  />
+                </li>
+                <li class="splide__slide card">
+                  <img
+                    class="v-center"
+                    src="/assets/sponsors/eriksgroenveld.png"
+                    alt="Eriks Groenveld"
+                  />
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <section class="section" id="lidmaatschap">
+          <h2>Lidmaatschap</h2>
+          <p>
+            Om lid te worden hoef je alleen maar je naam en lidmaatschaps-keuze
+            te
+            <a
+              href="mailto:psvwestfrieslandalgemeen@gmail@@com?subject=Inschrijving&body=Ik%20zou%20mij%20graag%20in%20willen%20schrijven%20bij%20psvwestrfriesland.%0D%0DVoornaam:%20%0DVoorletter(s):%20%0DAchternaam:%20%0DAdres:%20%0DPostcode:%20%0DWoonplaats:%20%0DGeboortedatum:%20%0DMobiel:%20%0DEmail:%20%0DIBAN:%20%0DLid%20met%20ingang%20van:%20%0DIk%20wil%20wel/%20niet%20lessen,%20elke%20week/%20om%20de%20week%0DNaam%20paard/pony:%20%0DIk%20neem%20wel/niet%20een%20startkaart."
+              onmouseover="this.href=this.href.replace('@@','.')"
+              >mailen</a
+            >. Er wordt contact met je opgenomen voor alle benodigde gegevens
+            die bij jouw keuze past.
+          </p>
+          <p>
+            Voor de kosten van de startpas verwijzen wij door naar de site van
+            de <a href="https://www.knhs.nl/" target="_blank">KNHS</a>.
+          </p>
+          <h5>Prijzenoverzicht</h5>
+          <table class="small" style="width: 90%">
+            <tbody>
+              <tr>
+                <td>Pony lessend</td>
+                <td class="text-right">€150,00</td>
+              </tr>
+              <tr>
+                <td>Pony 1/2 lessend</td>
+                <td class="text-right">€80,00</td>
+              </tr>
+              <tr class="spacer"></tr>
+              <tr>
+                <td>Paard lessend</td>
+                <td class="text-right">€165,00</td>
+              </tr>
+              <tr>
+                <td>Paard 1/2 lessend</td>
+                <td class="text-right">€85,00</td>
+              </tr>
+              <tr class="spacer"></tr>
+              <tr>
+                <td>Bakgebruiker</td>
+                <td class="text-right">€65,00</td>
+              </tr>
+              <tr>
+                <td>
+                  Paard Spring lessend<br />
+                  <small
+                    >bakgebruiker a 65,- + springlesgeld a 65,- op basis van 1x
+                    in de maand</small
+                  >
+                </td>
+                <td class="text-right">€130,00</td>
+              </tr>
+              <tr class="spacer"></tr>
+              <tr>
+                <td>Begunstiger</td>
+                <td class="text-right">€35,00</td>
+              </tr>
+              <tr>
+                <td>Men begunstiger</td>
+                <td class="text-right">€35,00</td>
+              </tr>
+              <tr>
+                <td>Niet lessend</td>
+                <td class="text-right">€37,50</td>
+              </tr>
+              <tr class="spacer"></tr>
+              <tr>
+                <td>KNHS lidmaatschap vereniging</td>
+                <td class="text-right">€25,75</td>
+              </tr>
+              <tr class="spacer"></tr>
+              <tr>
+                <td>Afkopen vrijwillegerdienst</td>
+                <td class="text-right">€25,00</td>
+              </tr>
+              <tr>
+                <td>Boeten ivm afwezig bij vrijwilligerdienst</td>
+                <td class="text-right">€50,00</td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="flex">
+            <div><span class="ml-auto"></span></div>
+          </div>
+          <div class="flex">
+            <div></div>
+            <div class="ml-auto"></div>
+          </div>
+        </section>
+
+        <section class="section" id="geschiedenis">
+          <h2>Geschiedenis</h2>
+          <p>
+            Het begon allemaal met een bezoek van enkele oud-leden aan een
+            concours hippique te Hoofddorp, toen er het idee ontstond dat zo’n
+            evenement ook in de kop van Noord-Holland gerealiseerd zou moeten
+            worden.
+          </p>
+          <p>
+            Dus besloten Cor Aarsen, de 1e instructeur van de vereniging, A.
+            Barten en D. de Graaf om 20 briefkaarten te kopen en deze te
+            verzenden naar alle paardenliefhebbers in de omgeving van
+            Schagerbrug. Op deze briefkaart stond een uitnodiging voor een
+            vergadering ter oprichting van een landelijke rijvereniging. De
+            vergadering werd op 11 augustus 1927 in Jagerslust te Sint Maarten
+            gehouden en op deze vergadering werd het eerste bestuur gekozen;
+            Gerrit Schoorl als voorzitter en Cornelis van de Sluys als
+            secretaris en penningmeester. Door groei van de vereniging kon een
+            jaar later het bestuur al worden uitgebreid met F. Rens, die de taak
+            als penningmeester overnam.
+          </p>
+          <p>
+            Er werd begonnen met 8 leden, maar al snel groeide de vereniging
+            naar 20 leden, het bestuur was actief en enthousiast en een
+            gezellige vereniging voorzag in een behoefte. Spoedig volgde dan ook
+            de aansluiting bij de Nederlandse Federatie van Landelijke
+            Rijvereniging, welke in 1926 was opgericht.
+          </p>
+          <p>
+            En reeds in 1931 behaalde de vereniging 2 titels tijdens nationale
+            wedstrijden in het Olympisch stadion te Amsterdam. In 1933 werd het
+            achttal kampioen in Groningen.<br />
+            De oorlog bracht een slechte tij en het ledental liep terug. Toen de
+            oorlog voorbij was bloeide de vereniging weer op. Het 20-jarige
+            jubileum werd extra opgevrolijkt; want tijdens wedstrijden in
+            Julianadorp wonnen de ruiters 12 van de 15 prijzen! De vereniging
+            gaf die tijd veel demonstraties, o.a. bij landbouwdag Opmeer.
+          </p>
+          <h4>Van rijtuigen naar rijpaarden</h4>
+          <p>
+            Door de verandering op de boerenbedrijven, van paard naar trekker,
+            had de vereniging het moeilijk. Maar door het toenemen van vrije
+            tijd steeg de belangstelling voor paardrijden bij een grotere groep
+            mensen, waardoor het aantal maneges sterk toenam. De paarden werden
+            nu meer rij technisch gefokt i.p.v. voor het zware boerenwerk.
+          </p>
+          <p>
+            De rijvereniging stelde zich als doel de liefde voor en de kennis
+            van het paard en pony te bevorderen en het juiste gebruik ervan. In
+            1962 werd de ponyclub opgericht en zo bleef de vereniging ieder
+            weekend instructies geven aan vele leerlingen. In de zomer buiten en
+            in de winter bij de manege van Co Vader in Schagen. Ook werden er
+            theorielessen gegeven bij de leerlingen thuis. Dit was altijd
+            leerzaam, maar vooral ook gezellig en verstevigde de band onderling
+            tussen de leden. Jaarlijks waren er onderlinge wedstrijden met
+            natuurlijk clubkampioenen. Ook het ponykamp was een jaarlijks
+            terugkerend evenement, dit werd met 3 overige verenigingen
+            georganiseerd.
+          </p>
+          <p>
+            Nu hebben we nog steeds een enthousiast bestuur en worden er nog
+            steeds diverse wedstrijden en activiteiten georganiseerd . Ook de
+            lessen in het weekend bestaan nog steeds. Hopelijk zal de vereniging
+            nog vele jaren op deze manier kunnen worden voortgezet, dus op naar
+            de 100 jaar in 2027!
+          </p>
+        </section>
+      <Footer />
+    </main>
+  </div>
+</BaseLayout>
+
+<script>
+  import Splide from "@splidejs/splide";
+  new Splide(".splide").mount();
+</script>

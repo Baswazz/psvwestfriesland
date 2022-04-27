@@ -1,0 +1,88 @@
+---
+import Header from "../components/Header.astro";
+import Contact from "../components/Contact.astro";
+
+const { items } = Astro.props;
+---
+
+<div class="p-3" id="main-nav">
+  <Header />
+  <nav>
+    <ul>
+      {items.map((item) => <li class="mb-1"><a href={item.url}>{item.label}</a></li>)}
+    </ul>
+  </nav>
+  <Contact />
+</div>
+
+<style lang="scss">
+  @use "../styles/variables.scss" as v;
+
+  #main-nav {
+    display: none;
+    position: sticky;
+    width: 100%;
+    max-width: 20rem;
+    height: 100vh;
+    border-right: 1px dashed v.$color-border;
+    top: 0;
+
+    @media (min-width: v.$breakpoint-desktop) {
+      display: flex;
+      flex-direction: column;
+    }
+
+    nav {
+      font-family: "Noto Serif", serif;
+      font-weight: 400;
+      font-size: 1rem;
+
+      ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+      }
+
+      a {
+        text-decoration: none;
+        border-bottom: 1px solid transparent;
+        transition: border-bottom 0.1s ease-in;
+
+        &:hover {
+          color: inherit;
+        }
+      }
+
+      // a.active {
+      //   color: $color-primary;
+      //   border-color: $color-primary;
+      // }
+
+      @media (min-width: v.$breakpoint-desktop) {
+        display: flex;
+        flex-direction: column;
+      }
+    }
+  }
+
+  @media (prefers-color-scheme: dark) {
+    #main-nav {
+      border-color: v.$color-border-dark;
+
+      nav {
+      a {
+        color: v.$color-text-dark;
+
+        &:hover {
+          color: v.$color-secondary-dark;
+        }
+      }
+
+      a.active {
+        color: v.$color-text-dark;
+        border-color: v.$color-text-dark;
+      }
+    }
+    }
+  }
+</style>
