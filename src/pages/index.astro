@@ -16,6 +16,19 @@ const navItems = [
   { label: "Lidmaatschap", url: "#lidmaatschap" },
   { label: "Geschiedenis", url: "#geschiedenis" }
 ];
+
+const sponsors = [
+  "assets/sponsors/oudbouwconstructies.png",
+  "assets/sponsors/ranzijn.png",
+  "assets/sponsors/kinepolis.png",
+  "assets/sponsors/spar.png",
+  "assets/sponsors/tuincentrumschoutenbos.png",
+  "assets/sponsors/hoeveslagerijleeuwenhorn.jpg",
+  "assets/sponsors/welkoop.jpg",
+  "assets/sponsors/paardenmassage-helen-jones.jpg",
+  "assets/sponsors/glasservice-vanzaanen.png",
+  "assets/sponsors/eriksgroenveld.png"
+];
 ---
 
 <BaseLayout {title}>
@@ -187,7 +200,7 @@ const navItems = [
               </tr>
             </tbody>
           </table>
-          <img class="section-img" src="/assets/strand-wandeling.jpg" alt="Strand wandeling"/>
+          <img class="section-img" src="assets/strand-wandeling.jpg" alt="Strand wandeling"/>
         </section>
 
         <section class="section" id="wedstrijden">
@@ -267,76 +280,7 @@ const navItems = [
           >
             <div class="splide__track">
               <ul class="splide__list">
-                <li class="splide__slide card">
-                  <img
-                    class="v-center"
-                    src="/assets/sponsors/oudbouwconstructies.png"
-                    alt="Oud Bouwconstructies"
-                  />
-                </li>
-                <li class="splide__slide card">
-                  <img
-                    class="v-center"
-                    src="/assets/sponsors/ranzijn.png"
-                    alt="Ranzijn"
-                  />
-                </li>
-                <li class="splide__slide card">
-                  <img
-                    class="v-center"
-                    src="/assets/sponsors/kinepolis.png"
-                    alt="Kinepolis"
-                  />
-                </li>
-                <li class="splide__slide card">
-                  <img
-                    class="v-center"
-                    src="/assets/sponsors/spar.png"
-                    alt="Spar"
-                  />
-                </li>
-                <li class="splide__slide card">
-                  <img
-                    class="v-center"
-                    src="/assets/sponsors/tuincentrumschoutenbos.png"
-                    alt="Tuincentrum Schoutenbox"
-                  />
-                </li>
-                <li class="splide__slide card">
-                  <img
-                    class="v-center"
-                    src="/assets/sponsors/hoeveslagerijleeuwenhorn.jpg"
-                    alt="Hoeveslagerij Leeuwenhorn"
-                  />
-                </li>
-                <li class="splide__slide card">
-                  <img
-                    class="v-center"
-                    src="/assets/sponsors/welkoop.jpg"
-                    alt="Welkoop"
-                  />
-                </li>
-                <li class="splide__slide card">
-                  <img
-                    class="v-center"
-                    src="/assets/sponsors/paardenmassage-helen-jones.jpg"
-                    alt="Paardenmassage Helen Jones"
-                  />
-                </li>
-                <li class="splide__slide card">
-                  <img
-                    class="v-center"
-                    src="/assets/sponsors/glasservice-vanzaanen.png"
-                    alt="Glasservice Vanzaanen"
-                  />
-                </li>
-                <li class="splide__slide card">
-                  <img
-                    class="v-center"
-                    src="/assets/sponsors/eriksgroenveld.png"
-                    alt="Eriks Groenveld"
-                  />
-                </li>
+                {sponsors.map((sponsor) => <li class="splide__slide card"><img class="v-center" src={sponsor}/></li>)}
               </ul>
             </div>
           </div>
