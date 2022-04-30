@@ -47,6 +47,10 @@ img {
   max-width: 100%;
 }
 
+.table-responsive {
+  overflow-x: auto;
+}
+
 table {
   width: 100%;
   border-collapse: collapse;

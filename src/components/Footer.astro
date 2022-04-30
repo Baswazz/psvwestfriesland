@@ -2,17 +2,10 @@
 const year = new Date().getFullYear();
 ---
 
-<footer class="flex pb-3">
-  <a href="reglement" class="mr-2">Reglementen</a>
-  <a href="privacy" class="mr-2">Privacyverklaring</a>
-  <p class="m-0 ml-auto">
+<footer class="pb-3">
+  <p class="m-0 mr-2">
     © {year} PSV Westfriesland
   </p>
+  <a href="reglement" class="mr-2" target="_blank">Reglementen</a>
+  <a href="privacy" class="mr-2" target="_blank">Privacyverklaring</a>
 </footer>
-
-<style lang="scss">
-  footer {
-    font-size: 0.875rem;
-    max-width: 70ch;
-  }
-</style>
